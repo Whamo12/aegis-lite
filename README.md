@@ -1,10 +1,36 @@
-# AegisLite
+# Aegis-Lite (In Development)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+A "lite" reporting tool.  An easy way to create and import bulk issues to [Jira](https://www.atlassian.com/software/jira).
 
-## Development server
+## Node
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install the latest version of [Node.js](https://nodejs.org/en/)
+
+Homebrew: `brew install node`
+
+## Yarn
+
+To install the project dependencies, you will need to install [Yarn](https://yarnpkg.com/en/docs/install).
+
+`brew update`
+
+`npm install -g yarn`
+
+To install dependencies, simply run `yarn`.
+
+## JSON Server
+
+Install [JSON Server](https://github.com/typicode/json-server)
+
+`npm install -g json-server`
+
+Run `json-server db.json`.  The API will run on `http://localhost:3000`.
+
+## json-2-csv
+
+Install [json2csv](https://www.npmjs.com/package/json2csv)
+
+`npm install -g json2csv`
 
 ## Code scaffolding
 
@@ -22,6 +48,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Development server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
