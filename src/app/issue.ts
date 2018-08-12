@@ -1,52 +1,65 @@
 export class Issue {
+    users: [{
+        name: string;
+        fullName: string;
+    }];
+    links: [{
+        name: string;
+        sourceId: number;
+        destinationId: number;
+    }];
+    projects: [{
+        name: string;
+        key: string;
+        description: string;
+        version: {
+            name: string;
+            released: boolean;
+            releaseDate: Date;
+        };
+        components: [{
+            component: string;
+        }]
+        issues: {
+            priority: string;
+            description: string;
+            status: string;
+            reporter: string;
+            labels: string[];
+            watchers: string[];
+            issueType: string;
+            resolution: string;
+            created: Date;
+            updated: string;
+            affectedVersions: number[];
+            summary: string;
+            assignee: string;
+            fixedVersion: number[];
+            externalId: number;
+            history: [{
+                author: string;
+                created: Date;
+                items: {
+                    fieldType: string;
+                    field: string;
+                    from: number;
+                    fromString: string;
+                    to: number;
+                    toString: string;
+                }
+            }]
+            customeFieldValues: [{
+                fieldName: string;
+                fieldType: string;
+                value: number;
+            }]
+            attachments: [{
+                name: string;
+                attacher: string;
+                created: Date;
+                url: string;
+                description: string;
+            }];
+        };
+    }];
 }
-
-/*   Example
-{
-  "config.version" : "2.0",
-  "config.project.from.csv" : "false",
-  "config.encoding" : "UTF-8",
-  "config.email.suffix" : "@redi.com",
-  "config.field.mappings" : {
-    "Status" : {
-      "jira.field" : "status"
-    },
-    "Assignee" : {
-      "jira.field" : "assignee"
-    },
-    "Issue Type" : {
-      "jira.field" : "issuetype"
-    },
-    "Description" : {
-      "jira.field" : "description"
-    },
-    "Priority" : {
-      "jira.field" : "priority"
-    },
-    "Reporter" : {
-      "jira.field" : "reporter"
-    },
-    "Summary" : {
-      "jira.field" : "summary"
-    },
-    "Resolution" : {
-      "jira.field" : "resolution"
-    },
-    "Created" : {
-      "jira.field" : "created"
-    }
-  },
-  "config.value.mappings" : {
-  },
-  "config.delimiter" : ",",
-  "config.project" : {
-    "project.type" : null,
-    "project.key" : "JR",
-    "project.description" : null,
-    "project.url" : null,
-    "project.name" : "JIRA Requests",
-    "project.lead" : null
-  },
-  "config.date.format" : "dd/MMM/yy"
-}
-*/
