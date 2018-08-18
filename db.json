@@ -1,19 +1,60 @@
 {
-  "posts": [
+  "issues": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "jiraId": "FOO-99",
+      "project": "App 1",
+      "issueType": "vulnerability",
+      "summary": "SQL Injection",
+      "severity": "Critical"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "jiraId": "FOO-100",
+      "project": "App 1",
+      "issueType": "vulnerability",
+      "summary": "Cross-Site Scripting",
+      "severity": "High"
+    },
+    {
+      "jiraId": "FOO-100",
+      "project": "App 1",
+      "issueType": "vulnerability",
+      "summary": "Sensitive Information Disclosed",
+      "severity": "Low"
+    },
+    {
+      "jiraId": "FOO-102",
+      "project": "App 1",
+      "issueType": "vulnerability",
+      "summary": "Insecure Transport Layer Protocol",
+      "severity": "High"
+    },
+    {
+      "jiraId": "FOO-103",
+      "project": "App 3",
+      "issueType": "vulnerability",
+      "summary": "Clickjacking",
+      "severity": "Medium"
+    },
+    {
+      "jiraId": "FOO-104",
+      "project": "App 5",
+      "issueType": "vulnerability",
+      "summary": "Http-Only missing from cookie",
+      "severity": "Lowest"
+    },
+    {
+      "jiraId": "FOO-189",
+      "project": "App 2",
+      "issueType": "vulnerability",
+      "summary": "XML Data Parsed Insecurely",
+      "severity": "Critical"
+    },
+    {
+      "jiraId": "FOO-134",
+      "project": "App 4",
+      "issueType": "vulnerability",
+      "summary": "Insecure Direct Object Reference",
+      "severity": "High"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
