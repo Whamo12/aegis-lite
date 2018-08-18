@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { Issue } from './issue';
+import { Issue } from './issue-form';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
@@ -15,7 +15,7 @@ export class AppService {
   private api = 'http://localhost:3000';
   error: Error;
 
-  createIssue(issue: Issue) {
+  createIssue(issue: any) {
     return this.httpClient.post(`${this.api}/issue`, issue).pipe(
       catchError(this.handleError)
     );
