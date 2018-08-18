@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from './app.service';
 
 @Component({
   selector: 'agl-root',
@@ -11,29 +10,8 @@ export class AppComponent implements OnInit {
   issues = [];
   color: string;
 
-  constructor(private appService: AppService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.appService.retrieveAllIssues().subscribe(res => {
-      this.issues = res;
-    });
-  }
+  ngOnInit() {}
 
-  styleObject(severity: string): Object {
-    if (severity.toLowerCase() === 'critical') {
-      return { 'color': 'red ' };
-    }
-    if (severity.toLowerCase() === 'high') {
-      return { 'color': 'darkred ' };
-    }
-    if (severity.toLowerCase() === 'medium') {
-      return { 'color': 'orange ' };
-    }
-    if (severity.toLowerCase() === 'low') {
-      return { 'color': 'darkgreen' };
-    }
-    if (severity.toLowerCase() === 'lowest') {
-      return { 'color': 'green' };
-    }
-  }
 }

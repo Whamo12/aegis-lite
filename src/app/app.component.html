@@ -1,32 +1,4 @@
 <div class="container">
   <h2 class="text-center">Aegis-Lite</h2>
 </div>
-<div class="container col-md-12">
-  <table class="table col-md-8 offset-md-2 ">
-    <thead>
-      <tr>
-        <th>JIRA ID</th>
-        <th>Project</th>
-        <th>Issue Type</th>
-        <th>Summary</th>
-        <th>Severity</th>
-        <th>&nbsp;
-          <button class="btn btn-info">Create Issue</button>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let issue of issues">
-        <td>{{issue?.jiraId}}</td>
-        <td>{{issue?.project}}</td>
-        <td>{{issue?.issueType}}</td>
-        <td>{{issue?.summary}}</td>
-        <td [ngStyle]="styleObject(issue.severity)">{{issue?.severity}}</td>
-        <td>
-          <i id="trash" class="fa fa-trash float-right" aria-hidden="true"></i>
-          <i id="pencil" class="fa fa-pencil float-right" aria-hidden="true"></i>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<router-outlet></router-outlet>
